@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	 <!-- 指定目标框架为 .NET Framework 4.8.1 -->
+    <TargetFramework>net481</TargetFramework>
+
+	<!-- 设置 C# 语言版本为 10.0 -->
+	<LangVersion>10.0</LangVersion>
+
+	  <!-- 根命名空间设置为 ValMod_Template -->
+    <RootNamespace>ValMod_Template</RootNamespace>
+
+	  <!-- 启用隐式 Using 指令 -->
+    <ImplicitUsings>enable</ImplicitUsings>
+	  
+	<!-- 启用 Nullable 引用类型 -->
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <Folder Include="Libs\" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Libs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_utils">
+      <HintPath>Libs\assembly_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_valheim">
+      <HintPath>Libs\assembly_valheim.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>Libs\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>Libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
