@@ -1,3 +1,6 @@
-﻿/.vs
+/.vs
 /ValMod Template/bin
 /ValMod Template/obj
+
+# 忽略Libs文件夹中的dll文件但保留文件夹结构
+/ValMod Template/Libs/*.dll
