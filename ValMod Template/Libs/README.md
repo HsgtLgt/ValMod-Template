@@ -1,31 +1,41 @@
-# Libs文件夹使用说明
+# 📚 依赖库说明
 
-## 重要提示
-本文件夹默认应为空。所有依赖项需要您从游戏安装目录手动添加，以确保版本兼容性。
+## ⚠️ 重要提醒
 
-## 完整引用库文件列表
-1. **BepInEx核心库** (位于`BepInEx\core`文件夹):
-   - BepInEx.dll - BepInEx插件框架核心
-   - 0Harmony.dll - Harmony补丁库，用于方法修改
+**这个文件夹目前是空的，你需要手动添加游戏依赖库才能编译项目！**
 
-2. **Valheim游戏库** (位于`valheim_Data\Managed`文件夹):
-   - assembly_valheim.dll - Valheim游戏主逻辑库
-   - assembly_utils.dll - 游戏工具和辅助功能库
-   - UnityEngine.dll - Unity引擎核心功能
-   - UnityEngine.CoreModule.dll - Unity核心模块
-   - assembly_guiutils.dll - Unity GUI工具库
-   - assembly_steamworks.dll - Steam平台集成库
+## 🔍 需要哪些文件？
 
-## 添加依赖项步骤
-1. 安装BepInEx到您的Valheim游戏目录
-2. 在Visual Studio中右键项目 → 添加 → 现有项
-3. 导航到游戏目录下的相应路径添加所需DLL文件:
-   - BepInEx文件: `游戏目录\BepInEx\core\`
-   - 游戏库文件: `游戏目录\valheim_Data\Managed\`
-4. 确保所有添加的引用"复制到输出目录"设置为"不复制"
+### BepInEx核心库（从游戏目录复制）
+- `BepInEx\core\BepInEx.dll` - 模组框架核心
+- `BepInEx\core\0Harmony.dll` - 代码补丁库
 
-## 为什么这样做?
-- 确保使用与您游戏版本完全匹配的库文件
-- 避免因版本不一致导致的兼容性问题
-- 便于后续更新维护
-- 符合Valheim模组开发最佳实践
+### Valheim游戏库（从游戏目录复制）
+- `valheim_Data\Managed\assembly_valheim.dll` - 游戏主逻辑
+- `valheim_Data\Managed\assembly_utils.dll` - 游戏工具库
+- `valheim_Data\Managed\UnityEngine.dll` - Unity引擎核心
+- `valheim_Data\Managed\UnityEngine.CoreModule.dll` - Unity核心模块
+
+## 📁 如何添加？
+
+1. **找到你的Valheim游戏安装目录**
+   - Steam版：`C:\Program Files (x86)\Steam\steamapps\common\Valheim\`
+
+2. **在Visual Studio中添加引用**
+   - 右键项目 → 添加 → 项目引用
+   - 点击"浏览"，选择上面列出的DLL文件
+
+3. **设置引用属性**
+   - 选中每个引用，在属性面板中设置"复制到输出目录"为"不复制"
+
+## 💡 为什么这样做？
+
+- ✅ 确保使用正确的游戏版本库文件
+- ✅ 避免版本不匹配导致的错误
+- ✅ 符合模组开发最佳实践
+
+## 🆘 找不到这些文件？
+
+- 确保已经安装了BepInEx到游戏目录
+- 确保游戏已经至少启动过一次
+- 如果还是找不到，请检查游戏安装是否完整
