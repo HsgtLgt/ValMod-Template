@@ -7,9 +7,9 @@ namespace ValMod_Template
     [BepInPlugin(mod_GUID, mod_NAME, mod_VERSION)]
     public class ValMod_Template : BaseUnityPlugin
     {
-        internal const string mod_GUID = "mod_GUID";
-        internal const string mod_NAME = "name";
-        internal const string mod_VERSION = "version";
+        internal const string mod_GUID = "mod_GUID"; // 插件 GUID （唯一标识符，只能由字母、数字和下划线组成）
+        internal const string mod_NAME = "插件名称"; // 插件名称
+        internal const string mod_VERSION = "0.0.1"; // 插件版本
         internal readonly Harmony harmony = new(mod_GUID);
 
         // 在对象被创建时立即调用。在游戏开始之前，对象已经初始化完成。它只会被调用一次。
